@@ -1,16 +1,22 @@
 /* Valentine Page Styles */
+html, body, #root {
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+}
+
 .valentine-container {
     text-align: center;
     padding: 20px;
     background-color: #ffe4e1;
     height: auto;  /* Allow content to expand */
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;  /* Align content at the top */
     align-items: center;
     overflow-y: auto;  /* Allow scrolling */
 }
+
 /* Beautiful Heading */
 h1 {
     font-size: 2.2rem;
