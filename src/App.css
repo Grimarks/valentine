@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap');
+
+body {
+    background: linear-gradient(45deg, pink, violet);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.pre-valentine {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+}
+
+.valentine {
+    font-family: 'Calligraffitti', cursive;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px #FF80BF, 4px 4px 5px #FFD662;
+    color: #F9f1cc;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.yes-button {
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    font-weight: bold;
+}
+
+.no-button {
+    position: absolute;
+    background-color: #ffcccc;
+    border: 2px solid #ff0000;
+}
+
+.fa-heart {
+    color: red;
+    font-size: 20px;
+    position: absolute;
+    top: -10vh;
+    animation: heartMove linear infinite;
+}
+
+@keyframes heartMove {
+    0% {
+        transform: translateY(-10vh);
+    }
+    100% {
+        transform: translateY(110vh);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .pre-valentine {
+        font-size: 1.2rem;
+    }
+
+    .valentine {
+        font-size: 2.5rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .yes-button, .no-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}

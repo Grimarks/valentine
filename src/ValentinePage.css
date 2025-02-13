@@ -1,0 +1,178 @@
+/* Valentine Page Styles */
+.valentine-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffe4e1;
+    height: auto;  /* Allow content to expand */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* Align content at the top */
+    align-items: center;
+    overflow-y: auto;  /* Allow scrolling */
+}
+/* Beautiful Heading */
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Introductory Text */
+.intro-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 15px;
+    max-width: 90%;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+/* Love Message Box */
+.love-message {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.love-message p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Romantic Poem Section */
+.poem {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.8s ease-in-out;
+}
+
+.poem h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff4757;
+}
+
+.poem p {
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Image Section */
+.image-container {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.love-image {
+    width: 85%;
+    max-width: 350px;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+/* Button */
+.back-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff6b81;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #ff4757;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro-text,
+    .love-message,
+    .poem {
+        font-size: 1rem;
+        max-width: 95%;
+    }
+
+    .poem h2 {
+        font-size: 1.3rem;
+    }
+
+    .love-image {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    .back-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    /* Additional styles for better mobile experience */
+    .valentine-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .love-message,
+    .poem {
+        padding: 15px; /* Adjust padding for love message and poem */
+    }
+
+    .love-message p,
+    .poem p {
+        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    }
+}
